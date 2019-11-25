@@ -1,3 +1,15 @@
+.main-header{
+  border-bottom: 2px dashed @navigation-border;
+  img{
+width: 100%;
+  }
+  h2{
+padding-top: 20px;
+  }
+  p{
+    
+  }
+}
 .home {
 
   .content-section {
@@ -56,6 +68,119 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      button{
+        .btn();
+      }
     }
   }
+  //Form 
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    .btn();
+  }
+  
+  input[type=submit]:hover {
+    background-color: gray;
+  }
+  
+  .form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+   }
 }// home
+
+//mobile Starts----------------------------------------------------------------
+
+@media @mobile{
+  .main-header{
+    border-bottom: 2px dashed @navigation-border;
+    img{
+  width: 100%;
+    }
+    h2{
+  padding-top: 20px;
+    }
+    p{
+      text-align: center;
+    }
+  }
+  .home {
+
+    .content-section {
+      margin: 0px 0;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      justify-content: space-between;
+
+      .text-content {
+        width: 98%;
+        padding-right: 0%;
+        text-align: center; 
+        padding-top: 20px;
+      }
+  
+      .img-content {
+        padding-top: 10px;
+        width: 98%;
+        padding-left: 0%;
+        text-align: center; 
+  
+        img {
+          border-radius: 10px;
+        }
+      }
+    }
+
+  
+    .content-destination {
+      width: 75%;
+      margin: 0 auto;
+      h2{
+        padding-top: 20px;
+      }
+      p{
+        text-align: center;
+      }
+  
+      img {
+        border-radius: 10px;
+      }
+    }
+  
+    .content-pick {
+      padding-top: 30px;
+      border-top: 2px dashed @navigation-border;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+  
+      .destination {
+        width: 90%;
+        margin-bottom: 30px;
+        h4{
+          text-align: center;
+          padding-top: 20px;
+        }
+        p{
+          text-align: center;
+        }
+        button{
+          .btn();
+        }
+      }
+    }
+  }
+  }
